@@ -10,6 +10,8 @@ import {
   FaMapMarkerAlt,
   FaFilePdf,
   FaExternalLinkAlt,
+  FaArrowCircleUp,
+  FaClock,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -25,6 +27,14 @@ const ProfilePage = () => {
     alert(`Subscribed with email: ${email}`);
     setEmail("");
   };
+
+  const handleNavigateToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="bg-gray-50">
       <div className="flex flex-col md:flex-row min-h-screen">
@@ -38,7 +48,7 @@ const ProfilePage = () => {
               <img
                 src="/images/Kailash.jpg"
                 alt="Profile"
-                className="w-32 h-32 rounded-full mb-2 border border-black border-opacity-40"
+                className="w-32 h-32 rounded-full mb-2 border border-black border-opacity-40 shadow-xl shadow-slate-400"
               />
               <h2 className="text-2xl font-bold mb-2">Kailash G</h2>
               <div className="flex items-center space-x-1 text-gray-600">
@@ -83,7 +93,7 @@ const ProfilePage = () => {
             </li>
             <li>
               <a
-                href="https://instagram.com/your-username"
+                href="https://www.instagram.com/i_am_signed_out/"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
               >
                 <FaInstagram />
@@ -91,7 +101,7 @@ const ProfilePage = () => {
             </li>
             <li>
               <a
-                href="https://facebook.com/your-username"
+                href="https://www.facebook.com/kailash.g.568/"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
               >
                 <FaFacebook />
@@ -99,7 +109,7 @@ const ProfilePage = () => {
             </li>
             <li>
               <a
-                href="https://behance.net/your-username"
+                href="https://behance.net/"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
               >
                 <FaBehance />
@@ -107,7 +117,7 @@ const ProfilePage = () => {
             </li>
             <li>
               <a
-                href="https://youtube.com/your-username"
+                href="https://www.youtube.com/@sapientcodes"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
               >
                 <FaYoutube />
@@ -115,7 +125,7 @@ const ProfilePage = () => {
             </li>
             <li>
               <a
-                href="path_to_your_resume.pdf"
+                href="/src/assets/Resume.pdf"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
               >
                 <FaFilePdf />
@@ -165,19 +175,22 @@ const ProfilePage = () => {
           >
             <h2 className="text-2xl font-bold mb-4">About Me</h2>
             <p className="text-lg font-semibold text-justify">
-              I'm Kailash G graduated from B.S. Abdur Rahman Crescent Institute
-              of Science and Technology. I am highly motivated to excel in my
-              career and continuously enhance my skills. I have a solid
-              foundation in HTML, CSS, JavaScript, JS Frameworks, and optimizing
-              website performance. Furthermore, I am actively seeking
-              opportunities to apply and enhance my existing skills with
-              real-world experience. I am dedicated and enthusiastic about
-              finding avenues to grow professionally. Let's connect on LinkedIn
-              to share ideas and collaborate towards achieving our career goals
-              together. I am eager to make valuable contributions and seize
-              entry-level opportunities that allow me to effectively showcase my
-              skills and potential. Thank you, and let's soar to new heights
-              together! 🚀
+              I'm Kailash G, a recent graduate from B.S. Abdur Rahman Crescent
+              Institute of Science and Technology. With a solid foundation in
+              HTML, CSS, JavaScript, and various JS frameworks, I'm
+              well-prepared to embark on a career in Full Stack Development.
+              However, my passion extends beyond coding—I'm equally fascinated
+              by the world of digital marketing and strategy.{" "}
+            </p>
+            <p className="text-lg font-semibold text-justify mt-2">
+              Driven by a desire for personal and professional growth, I'm
+              actively seeking opportunities to apply my technical skills in
+              optimizing website performance while also exploring the
+              intricacies of digital marketing campaigns. Let's connect on
+              LinkedIn to exchange ideas and collaborate on projects that align
+              with our career aspirations. Together, let's aim for new heights
+              and seize exciting opportunities in the dynamic fields of
+              technology and marketing!🚀
             </p>
           </motion.section>
           <motion.section
@@ -189,8 +202,10 @@ const ProfilePage = () => {
             <h2 className="text-2xl font-bold mb-4">Education</h2>
             <div className="text-lg">
               <p>
-                <b>BSA Crescent Institute of Science and Technology</b> -
-                B.Tech, Information Technology{" "}
+                <b>
+                  B.S. Abdur Rahman Crescent Institute of Science and Technology
+                </b>{" "}
+                - B.Tech, Information Technology{" "}
                 <strong>(Oct 2020 - May 2024)</strong>
               </p>
               <p className="mt-4">
@@ -208,9 +223,15 @@ const ProfilePage = () => {
           >
             <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
             <div className="p-6 border rounded-lg shadow-md">
-              <h2 className="text-xl font-bold mb-2">
-                Full Stack Developer @Amazon
-              </h2>
+              <div className="flex justify-between items-center">
+                <h2 className="text-xl font-bold mb-2">
+                  Full Stack Developer, MentorMenti
+                </h2>
+                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm flex items-center">
+                  <FaClock className="mr-1" /> Apr 2024 - Present
+                </span>
+              </div>
+
               <p className="mb-4">
                 Responsible for developing user-facing features using React.js,
                 optimizing web applications for maximum speed and scalability,
@@ -243,45 +264,49 @@ const ProfilePage = () => {
                   Express.js
                 </span>
                 <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  Next.js
-                </span>
-                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  Python
-                </span>
-                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
                   RESTful APIs
                 </span>
-                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  PHP
-                </span>
-                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  Laravel
-                </span>
-                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  SQL
-                </span>
-                {/* Add more skills as needed */}
               </div>
             </div>
             <div className="p-6 border rounded-lg shadow-md mt-4">
-              <h2 className="text-xl font-bold mb-2">
-                Backend Developer @Adobe
-              </h2>
+              <div className="flex justify-between items-center">
+                <h2 className="text-xl font-bold mb-2">
+                  Digital Marketing Strategist, The K Innovations{" "}
+                </h2>
+                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm flex items-center">
+                  <FaClock className="mr-1" /> June 2024 - Present
+                </span>
+              </div>
+
               <p className="mb-4">
-                Responsible for building and maintaining efficient, reusable,
-                and reliable PHP code, developing back-end components,
-                integrating data storage solutions, and implementing front-end
-                interfaces.
+                I was responsible for spearheading the development and execution
+                of comprehensive digital marketing strategies to enhance brand
+                visibility, drive engagement, and increase conversion rates.
+                Leveraging my expertise in digital marketing channels, including
+                social media, email marketing, SEO, and PPC, I devised tailored
+                strategies aligned with business objectives.
               </p>
               <div className="flex flex-wrap">
                 <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  PHP
+                  Strategic Planning
                 </span>
                 <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  MySQL
+                  SEO (Search Engine Optimization)
                 </span>
                 <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
-                  RESTful APIs
+                  Content Marketing
+                </span>
+                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
+                  Social Media Marketing
+                </span>
+                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
+                  Copywriting
+                </span>
+                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
+                  Project Management
+                </span>
+                <span className="bg-gray-200 text-gray-700 p-2 rounded-full text-sm mr-2 mb-2">
+                  Client Acquisiton
                 </span>
                 {/* Add more skills as needed */}
               </div>
@@ -306,13 +331,13 @@ const ProfilePage = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com/your-repo"
+                    href="https://github.com/Kailash1233/ProFolio"
                     className="text-gray-600 hover:text-gray-800"
                   >
                     <FaGithub />
                   </a>
                   <a
-                    href="https://project-link.com"
+                    href="https://pro-folio.vercel.app/"
                     className="text-gray-600 hover:text-gray-800"
                   >
                     <FaExternalLinkAlt />
@@ -372,67 +397,103 @@ const ProfilePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
+            <h2 className="text-3xl font-bold mb-6">Testimonials</h2>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="p-6 border rounded-lg shadow-md">
+              <motion.div
+                className="p-6 border rounded-lg shadow-md"
+                whileHover={{ y: -10 }}
+              >
                 <div className="flex items-center mb-4">
-                  <FaInstagram className="text-pink-500 mr-2" />
-                  <h3 className="text-lg font-bold">Instagram User</h3>
+                  <FaInstagram className="text-pink-500 mr-3 text-2xl" />
+                  <h3 className="text-xl font-bold">The K Innovations</h3>
                 </div>
-                <p className="text-sm text-justify">
-                  This is a testimonial from Instagram. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Integer posuere erat a
-                  ante.
+                <p className="text-md text-justify">
+                  Impressed by the expertise of Kailash! His attention to detail
+                  and innovative approach transformed our web presence, making
+                  our brand stand out in the digital landscape.
                 </p>
-              </div>
-              <div className="p-6 border rounded-lg shadow-md">
+                <p className="text-base text-gray-600 mt-2">
+                  CEO, The K Innovations
+                </p>
+              </motion.div>
+              <motion.div
+                className="p-6 border rounded-lg shadow-md"
+                whileHover={{ y: -10 }}
+              >
                 <div className="flex items-center mb-4">
-                  <FaTwitter className="text-blue-400 mr-2" />
-                  <h3 className="text-lg font-bold">Twitter User</h3>
+                  <FaTwitter className="text-blue-400 mr-3 text-2xl" />
+                  <h3 className="text-xl font-bold">Pradeep</h3>
                 </div>
-                <p className="text-sm text-justify">
-                  This is a testimonial from Twitter. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Integer posuere erat a
-                  ante.
+                <p className="text-md text-justify">
+                  Thanks to Kailash, our website's visibility skyrocketed! Their
+                  SEO expertise brought a flood of organic traffic, boosting our
+                  online presence.
                 </p>
-              </div>
-              <div className="p-6 border rounded-lg shadow-md">
+                <p className="text-base text-gray-600 mt-2">
+                  Founder & CEO, Arivudaimai
+                </p>
+              </motion.div>
+              <motion.div
+                className="p-6 border rounded-lg shadow-md"
+                whileHover={{ y: -10 }}
+              >
                 <div className="flex items-center mb-4">
-                  <FaLinkedin className="text-blue-700 mr-2" />
-                  <h3 className="text-lg font-bold">LinkedIn User 1</h3>
+                  <FaLinkedin className="text-blue-700 mr-3 text-2xl" />
+                  <h3 className="text-xl font-bold">Karthikeyan B</h3>
                 </div>
-                <p className="text-sm text-justify">
-                  This is a testimonial from LinkedIn. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Integer posuere erat a
-                  ante.
+                <p className="text-md text-justify">
+                  This is Karthik. I highly recommend Kailash for his excellent
+                  work in optimizing my LinkedIn profile.
                 </p>
-              </div>
-              <div className="p-6 border rounded-lg shadow-md">
+                <p className="text-base text-gray-600 mt-2">
+                  Web Developer, Virtual India
+                </p>
+              </motion.div>
+              <motion.div
+                className="p-6 border rounded-lg shadow-md"
+                whileHover={{ y: -10 }}
+              >
                 <div className="flex items-center mb-4">
-                  <FaLinkedin className="text-blue-700 mr-2" />
-                  <h3 className="text-lg font-bold">LinkedIn User 2</h3>
+                  <FaLinkedin className="text-blue-700 mr-3 text-2xl" />
+                  <h3 className="text-xl font-bold">Suganya</h3>
                 </div>
-                <p className="text-sm text-justify">
-                  This is another testimonial from LinkedIn. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Integer posuere erat a
-                  ante.
+                <p className="text-md text-justify">
+                  Huge thanks to Kailash for supercharging my LinkedIn profile!
+                  I'm now getting noticed by recruiters and industry peers, all
+                  thanks to their optimization magic
                 </p>
-              </div>
-              <div className="p-6 border rounded-lg shadow-md">
+                <p className="text-base text-gray-600 mt-2">
+                  Team Lead, Infosys
+                </p>
+              </motion.div>
+              <motion.div
+                className="p-6 border rounded-lg shadow-md"
+                whileHover={{ y: -10 }}
+              >
                 <div className="flex items-center mb-4">
-                  <FaFacebook className="text-blue-600 mr-2" />
-                  <h3 className="text-lg font-bold">Facebook User</h3>
+                  <FaFacebook className="text-blue-600 mr-3 text-2xl" />
+                  <h3 className="text-xl font-bold">The K Innovations</h3>
                 </div>
-                <p className="text-sm text-justify">
-                  This is a testimonial from Facebook. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Integer posuere erat a
-                  ante.
+                <p className="text-md text-justify">
+                  They transformed our website into a sleek, user-friendly
+                  platform, enhancing our online brand
                 </p>
-              </div>
+                <p className="text-base text-gray-600 mt-2">
+                  CEO, The K Innovations
+                </p>
+              </motion.div>
             </div>
           </motion.section>
         </div>
       </div>
+      <motion.button
+        onClick={handleNavigateToTop}
+        className="fixed bottom-8 right-8 bg-gray-800 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <FaArrowCircleUp className="text-xl" />
+      </motion.button>
     </div>
   );
 };
