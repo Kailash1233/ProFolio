@@ -109,6 +109,14 @@ const ProfilePage = () => {
             </li>
             <li>
               <a
+                href="https://x.com/Kailash61203/"
+                className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
+              >
+                <FaTwitter />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://behance.net/"
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 text-lg"
               >
