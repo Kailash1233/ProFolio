@@ -1,8 +1,10 @@
-# React + Vite
+# ProFolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Profolio is a sleek and intuitive web application designed to create and showcase a comprehensive personal profile on a single page. Ideal for job seekers, freelancers, and professionals.
 
-Currently, two official plugins are available:
+The Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vite - React
+TailwindCSS
+Framer Motion
+React Icons
